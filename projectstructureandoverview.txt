@@ -1,0 +1,17 @@
+# Automatic Tagging System
+
+## Project Components
+1. Data Preparation
+2. Feature Extraction
+3. Model Development
+4. Evaluation
+5. Deployment
+
+## Technical Stack
+- Python 3.8+
+- Libraries: 
+  - Data Processing: pandas, numpy
+  - NLP: scikit-learn, transformers
+  - Model Training: PyTorch
+  - Web Deployment: FastAPI
+- Machine Learning Approach: Multi-label Text Classification
