@@ -208,3 +208,13 @@ curl -X POST "http://localhost:8000/predict_tags" \
 automatictagging/src$ uvicorn app:app --reload
 
 # Automatic-Tagging-system
+
+
+to run the frontend:
+```bash
+cd frontend
+npm run dev
+```
+
+![alt text](image-1.png)
+
