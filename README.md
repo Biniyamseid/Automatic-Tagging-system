@@ -188,6 +188,11 @@ python src/train.py
 
 ### 6. Run API
 
+```
+cd src
+uvicorn app:app --reload
+```
+
 ```bash
 # Start FastAPI service
 uvicorn src.app:app --reload
@@ -209,12 +214,11 @@ automatictagging/src$ uvicorn app:app --reload
 
 # Automatic-Tagging-system
 
-
 to run the frontend:
+
 ```bash
 cd frontend
 npm run dev
 ```
 
 ![alt text](image-1.png)
-
