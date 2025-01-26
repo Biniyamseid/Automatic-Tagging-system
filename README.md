@@ -78,6 +78,8 @@ model_trainer = ModelTrainer(input_dim=X_train.shape[1], num_classes=4)
 model_trainer.train(X_train, y_train, X_val, y_val)
 ```
 
+![model training and evaluation](image.png)
+
 ### Evaluation
 
 The model's performance is evaluated using accuracy, which measures the proportion of correctly predicted instances out of the total instances.
@@ -114,7 +116,7 @@ async def predict_tags(input_text: TextInput):
 
 ## Results
 
-The model achieved a final test accuracy of approximately 85%, indicating a strong ability to classify news articles into the correct categories. The use of TF-IDF for feature extraction and a neural network for classification proved effective for this task.
+The model achieved a final test accuracy of approximately 90.7%, indicating a strong ability to classify news articles into the correct categories. The use of TF-IDF for feature extraction and a neural network for classification proved effective for this task.
 
 ### Sample Output
 
