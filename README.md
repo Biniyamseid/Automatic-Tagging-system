@@ -69,6 +69,8 @@ model_trainer = ModelTrainer(input_dim=X_train.shape[1], num_classes=4)
 model_trainer.train(X_train, y_train, X_val, y_val)
 ```
 
+![model training and evaluation](image.png)
+
 ### Evaluation
 
 The model's performance is evaluated using accuracy, which measures the proportion of correctly predicted instances out of the total instances.
