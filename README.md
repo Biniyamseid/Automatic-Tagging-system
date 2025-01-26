@@ -107,7 +107,7 @@ async def predict_tags(input_text: TextInput):
 
 ## Results
 
-The model achieved a final test accuracy of approximately 85%, indicating a strong ability to classify news articles into the correct categories. The use of TF-IDF for feature extraction and a neural network for classification proved effective for this task.
+The model achieved a final test accuracy of approximately 90.7%, indicating a strong ability to classify news articles into the correct categories. The use of TF-IDF for feature extraction and a neural network for classification proved effective for this task.
 
 ### Sample Output
 
