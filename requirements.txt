@@ -1,7 +1,7 @@
 fastapi
 uvicorn
 joblib
-# torch
+torch
 scikit-learn
 pandas
 numpy
