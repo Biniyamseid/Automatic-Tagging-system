@@ -1,5 +1,14 @@
 # Project Report: Automatic Tagging System
 
+deployed on https://automatic-tagging-system.onrender.com/
+
+```
+curl -X POST "https://automatic-tagging-system.onrender.com/predict_tags" \
+     -H "Content-Type: application/json" \
+     -d '{"text":"Reuters - Private investment firm Carlyle Group, which has a reputation for making well-timed and occasionally controversial plays in the defense industry, has quietly placed its bets on another part of the market."}'
+
+```
+
 ## Objective
 
 The primary objective of this project is to develop an automatic tagging system that can classify news articles into predefined categories using natural language processing (NLP) techniques. The system leverages machine learning models to predict tags based on the content of the articles.
@@ -126,9 +135,6 @@ This project demonstrates the application of NLP techniques and machine learning
 
 This report provides a detailed overview of the automatic tagging system, covering the objectives, methods, data, and results. It highlights the use of TF-IDF and neural networks in building an effective text classification model.
 
-
-
-
 ## Project Setup Instructions
 
 ### 1. Create Project Environment
@@ -198,4 +204,5 @@ curl -X POST "http://localhost:8000/predict_tags" \
 /automatictagging/src$ python train.py
 /automatictagging/src$ uvicorn app:app --reload
 automatictagging/src$ uvicorn app:app --reload
+
 # Automatic-Tagging-system
