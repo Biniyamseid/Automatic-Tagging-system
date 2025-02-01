@@ -7,16 +7,19 @@ export default function ArticleEditor() {
   const [content, setContent] = useState('');
   const [tags, setTags] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleGenerateTags = async () => {
     if (!content) return;
     
     setIsLoading(true);
+    setError(null);
     try {
       const predictedTags = await predictTags(content);
       setTags(predictedTags);
     } catch (error) {
       console.error('Failed to generate tags:', error);
+      setError('Failed to generate tags. Please try again later.');
     } finally {
       setIsLoading(false);
     }
@@ -60,14 +63,20 @@ export default function ArticleEditor() {
             <span>Generate Tags</span>
           </button>
 
-          <button
+          {/* <button
             onClick={handlePublish}
             disabled={!title || !content}
             className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50"
           >
             Publish
-          </button>
+          </button> */}
         </div>
+
+        {error && (
+          <div className="text-red-600 text-sm mt-2">
+            {error}
+          </div>
+        )}
 
         {tags.length > 0 && (
           <div className="space-y-2">

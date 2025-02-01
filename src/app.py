@@ -1,6 +1,25 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import joblib
+
+app = FastAPI(title="Automatic Tagging System")
+
+# Configure CORS
+origins = [
+    "http://localhost",
+    "http://localhost:3000",
+    "http://localhost:8080",
+]
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 class TaggingService:
     def __init__(self, model_path, vectorizer_path, tag_classes):
@@ -28,7 +47,7 @@ class TaggingService:
         print(f"Predicted tags: {predicted_tags}")  # Debug print
         return predicted_tags
 
-app = FastAPI(title="Automatic Tagging System")
+
 
 class TextInput(BaseModel):
     text: str
